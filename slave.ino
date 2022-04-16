@@ -3,10 +3,14 @@
 #include <SoftwareSerial.h>
 #include "src/ModbusRTUSlave/ModbusRTUSlave.h"
 
+// 0.8 => 0.2bar
+// 1.7 => 2.2bar
+
+
 const byte ledPin = 13,
            rxPin = 10, txPin = 11, dePin = 3,
            id = 10,
-           sensorPin = A0;
+           sensorPin = A6;
 
 const word bufSize = 256, numHoldingRegisters = 3,
            ambientTempAddress = 0, shaftTempAddress = 1, pressureAddress = 2;
